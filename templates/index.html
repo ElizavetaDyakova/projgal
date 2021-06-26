@@ -1,0 +1,78 @@
+
+{% extends 'layout.html' %}
+{% load static %}
+{% block slog %}
+<article class="slog-wrap">
+                <h1 class="slog">
+                    Галерея выпускников ТСПК
+                </h1>
+                ТСПК - образование для жизни!
+            </article>
+            <div class="img-cnt">
+                <img src="{% static 'img/ff.png' %}" alt="" style="
+                max-width: 970px;
+            ">
+            </div>
+{% endblock %}
+{% block stat %}
+<section class="container">
+            <div class="info">
+                <div class="block-info">1000<br> обучающихся</div>
+                <div class="block-info">842 <br>медалиста</div>
+                <div class="block-info">842 <br> победителей <br>WSR</div>
+            </div>
+
+        </section>
+{% endblock%}
+{% block unique_content %}
+ <section class="container cont-blue">
+            <div class="otdel">
+                <div class="zagl-cont">
+                    <a href="" class="zagl">
+                        <p class="otdel-zag1">НАШИ ВЫПУСКНИКИ</p>
+                       {% comment %} <p class="otdel-zag1" style="margin-left: 8em;">IT</p> {% endcomment %}
+
+                    </a>
+                </div>
+<div class="bl-f-sl">
+                    <div id="viewport">
+                        <div class="slider">
+                        {% for card in cards %}
+                            <div class="slide">
+                            <a href="{% url 'card_detail' card.id %}">
+                                <div class="kart">
+                                    <div class="kart-bl">
+                                        <img src="{{ card.ava.url }}" alt="фото">
+                                    </div>
+                                    <div class="kart-bl">
+                                        <h3 class="fio">{{ card.name }}</h3>
+                                        <a href="{% url 'cat_ord' card.category.id %}">{{ card.category.category_text }}</a>
+                                        <h5 class="kurs">Кредо:</h5>
+                                        <p>{{ card.kredo }}</p>
+                                        <h5 class="kurs">Отзыв:</h5>
+                                        <p>{{ card.otzyv }}</p>
+                                        <p>Год выпуска: {{ card.god_grad}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                            </div>
+                        {% endfor%}
+                        </div>
+                    </div>
+                </div>
+                <div id="viewSlider">
+                    <div class="viewSlide"></div>
+                    <div class="viewSlide"></div>
+                    <div class="viewSlide"></div>
+                    <div class="viewSlide"></div>
+                    <div class="viewSlide"></div>
+                </div>
+                <button class="prev">Назад</button>
+                <a href="{% url 'all'%}">all</a>
+                <button class="next" style="float: right;">Вперёд</button>
+            </div>
+
+</section>
+    
+{% comment %}  {% endcomment %}
+{% endblock unique_content %}

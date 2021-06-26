@@ -1,0 +1,306 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Play', sans-serif;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover,
+li:hover {
+    transition: 0.5s;
+    text-shadow: 0px 2px 6px rgba(255, 255, 255, 0.88);
+    color: #413939;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navig {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+
+/* .head {
+    height: 625px;
+} */
+
+.header-cont {
+    position: relative;
+}
+
+.img-cnt {
+    position: absolute;
+    right: 3em;
+    top: -1em;
+}
+
+header {
+    background-color: #AEC1DF;
+}
+
+.container {
+    padding: 3rem 18rem;
+}
+
+.slog-wrap {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 29px;
+    line-height: 49px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    margin-top: -3em;
+}
+
+.slog-wrap h1 {
+    font-size: 42px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.otdel-zag1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.otdel {
+    height: 100%;
+}
+
+.submenu {
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    display: none;
+    width: 160px;
+    border-radius: 2px;
+    padding-top: 1em;
+}
+
+.submenu-li {
+    padding: 0.3em;
+}
+
+.menu-li:hover .submenu {
+    display: block;
+    /* opacity: 1; */
+    transition: 1s;
+    background-color: #AEC1DF;
+    /* visibility: visible; */
+}
+
+.menu-li:hover .submenu a:hover {
+    color: #7387a8;
+    transition: 1s;
+}
+
+.menu-li {
+    margin: 1.2em 0;
+    width: 200px;
+}
+
+.menu-li a {
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.navig img {
+    margin-right: 1.5em;
+}
+
+.submenu-li a {
+    font-weight: 100;
+    font-size: 18px;
+}
+
+
+/* основная часть */
+
+.info {
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-info {
+    text-align: center;
+    font-weight: normal;
+    font-size: 58px;
+    line-height: 81px;
+    color: #7F98C9;
+}
+
+.kart {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fio {
+    font-size: 32px;
+    font-weight: 200;
+    color: #FFFFFF;
+}
+
+.otdel {
+    position: relative;
+}
+
+.zagl-cont {
+    margin-bottom: 3em;
+    /* position: absolute;
+    top: 12em;
+    z-index: 0;
+    left: -22em;
+    transform: rotate( -90deg); */
+}
+
+.kart-bl img {
+    width: 389.42px;
+    height: 494px;
+    border-radius: 17px;
+    object-fit: cover;
+}
+
+.cont-blue {
+    background-color: #B7C4DD;
+}
+
+.kart-bl h4,
+h5 {
+    font-size: 25px;
+    color: #FFFFFF;
+    margin: 1.5rem 0;
+    font-weight: 200;
+}
+
+.kart-bl p {
+    font-weight: 100;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.kart-bl {
+    width: 389.42px;
+    height: 494px;
+    padding: 0 1rem;
+}
+
+.card-bl {}
+
+
+/* sl */
+
+#viewport {
+    width: 100%;
+    display: table;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: calc(100% * 5);
+    height: 509px;
+    justify-content: start;
+    flex-wrap: nowrap;
+}
+
+.slide {
+    width: calc(100%/5);
+    height: 100%;
+    display: inline;
+    float: left;
+}
+
+.bl-f-sl {
+    margin: 0 auto;
+    max-width: 1225px;
+}
+
+#viewSlider {
+    display: flex;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.viewSlide {
+    width: 20%;
+    height: 5px;
+    background-color: #98A5BE;
+}
+
+
+/* foooter */
+
+footer {
+    background-color: #98A5BE;
+}
+
+
+/* menu prokr */
+
+#header {
+    height: 358px;
+}
+
+#nav {
+    position: relative;
+    background-color: #AEC1DF;
+    height: 100px;
+}
+
+#nav.fixed {
+    z-index: 1;
+    background-color: #AEC1DF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 18rem;
+    width: 100%;
+}
+
+#nav.fixed .submenu {
+    background-color: #AEC1DF;
+    padding: 1em;
+    opacity: 0.9;
+}
+
+.card-card {
+    color: #7387a8;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 70%;
+    height: 370px;
+    border-radius: 17px;
+    object-fit: cover;
+}
+
+.fio-card {
+    font-size: 20px;
+}

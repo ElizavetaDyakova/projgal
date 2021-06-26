@@ -1,0 +1,28 @@
+{% load static%}
+<div id="header">
+                <div id="nav">
+                    <nav>
+                        <ul class="navig">
+                            <li>
+                                <a href="{% url 'otdel-slide'%}">
+                                    <img src="{% static 'img/logo.png' %}" alt="TSPK">
+                                </a>
+                            </li>
+ {% for category in categories %}
+                            <li class="menu-li">
+                                <a href="#">{{ category}}</a>
+                                <ul class="submenu">
+                                {% for subcategory in category.category_set.all %}
+                                    <li class="submenu-li"><a href="{% url 'cat_ord' subcategory.id %}">{{ subcategory }}</a></li>
+                                {% endfor %}
+                                </ul>
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+                            
+
+                        

@@ -1,0 +1,53 @@
+{% comment %} {% extends 'layout.html' %} {% endcomment %}
+{% load static %}
+{% block unique_content %}
+ <section class="container cont-blue">
+            <div class="otdel">
+                <div class="zagl-cont">
+                    <a href="" class="zagl">
+                        <p class="otdel-zag1">НАШИ ВЫПУСКНИКИ</p>
+                       {% comment %} <p class="otdel-zag1" style="margin-left: 8em;">IT</p> {% endcomment %}
+
+                    </a>
+                </div>
+<div class="bl-f-sl">
+                    <div id="viewport">
+                        <div class="slider">
+                        {% for card in cards %}
+                            <div class="slide">
+                            <a href="{% url 'card_detail' card.id %}">
+                                <div class="kart">
+                                    <div class="kart-bl">
+                                        <img src="{{ card.ava.url }}" alt="фото">
+                                    </div>
+                                    <div class="kart-bl">
+                                        <h3 class="fio">{{ card.name }}</h3>
+                                        <a href="{% url 'cat_ord' card.category.id %}">{{ card.category.category_text }}</a>
+                                        <h5 class="kurs">Кредо:</h5>
+                                        <p>{{ card.kredo }}</p>
+                                        <h5 class="kurs">Отзыв:</h5>
+                                        <p>{{ card.otzyv }}</p>
+                                        <p>{{ card.god_grad|date:" Y "}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                            </div>
+                        {% endfor%}
+                        </div>
+                    </div>
+                </div>
+                <div id="viewSlider">
+                    <div class="viewSlide"></div>
+                    <div class="viewSlide"></div>
+                    <div class="viewSlide"></div>
+                    <div class="viewSlide"></div>
+                    <div class="viewSlide"></div>
+                </div>
+                <button class="prev">Назад</button>
+                <button class="next" style="float: right;">Вперёд</button>
+            </div>
+
+</section>
+    
+{% comment %}  {% endcomment %}
+{% endblock unique_content %}

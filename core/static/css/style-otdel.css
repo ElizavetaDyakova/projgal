@@ -1,0 +1,30 @@
+.cont-otdel {
+    padding: 1rem 18rem;
+}
+
+header {
+    height: 100px;
+}
+
+.navig li:hover .submenu {
+    background-color: #AEC1DF;
+    padding: 1em;
+    opacity: 0.9;
+}
+
+.filter {
+    margin-bottom: 6em;
+}
+
+.chelovek {
+    width: 295px;
+}
+
+.fio-card {
+    color: #001B67;
+}
+
+.chelovek p,
+a {
+    color: #363F58;
+}
