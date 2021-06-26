@@ -6,7 +6,7 @@
 {% cat_sort %}
 {% block unique_content%}
 
-<section class="filter">
+<section class="container">
 
 {% if cards %}
 <h1>{{cards.category.category_text}}</h1>
@@ -29,7 +29,7 @@
                             {% endfor%}
     </ul>
     {% else %}
-    <p class='kart'>К сожалению, пока объявлений по данной категории нету:(</p>
+    <p class='err'>К сожалению, пока объявлений по данной категории нету:(</p>
 {% endif %}
         </section>
 {% endblock%}

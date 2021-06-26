@@ -3,9 +3,10 @@
 {% load static%}
 <section class="container">
 
-{% block res%}
+{% block unique_content%}
+        <section  class="container">
 {% if object_list %}
-{% comment %} {% load cat_sort %} {% endcomment %}
+
     <ul>
        {% for card in object_list %}
         <div class="card">
@@ -25,7 +26,7 @@
                             {% endfor%}
 
 {% else %}
-    <p class='kart'>К сожалению, пока объявлений по данной категории нету:(</p>
+    <p class='err'>К сожалению, пока объявлений по данной категории нету:(</p>
 {% endif %}
-{% endblock%}
         </section>
+{% endblock%}

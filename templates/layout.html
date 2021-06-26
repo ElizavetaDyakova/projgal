@@ -17,8 +17,9 @@
 
 <body>
 <header class="head">
-<section class="container header-cont">
+<section class="container header-cont"><div id="header">
             {% show_top_menu %}
+            </div>
             {% block slog %}
             {% endblock %}
         </section>
@@ -26,8 +27,6 @@
     <main>
         {% block stat %}
         {% endblock%}
-{% block form%}
-{% endblock%}
 {% block unique_content %}
 {% endblock%}
     </main>

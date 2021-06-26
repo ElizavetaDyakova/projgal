@@ -63,6 +63,10 @@ header {
     margin-top: -3em;
 }
 
+.err {
+    min-height: 267px;
+}
+
 .slog-wrap h1 {
     font-size: 42px;
 }
