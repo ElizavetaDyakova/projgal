@@ -76,7 +76,7 @@ def cat_ord(request, category_id):
         'cards': cards,
         'form': form,
     }
-    return render('cat.html',request,  context)
+    return render(request, 'cat.html', context)
 
 
 def slide(request):
@@ -88,7 +88,7 @@ def slide(request):
     context = {
         'cards': cards,
     }
-    return render( 'index.html',request, context)
+    return render(request, 'index.html', context)
 
 
 class CardView(DetailView):
