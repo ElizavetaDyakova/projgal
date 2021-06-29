@@ -36,6 +36,7 @@ def add_path(instance, filename):
 class Category(models.Model):
     parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True,verbose_name='Отделение')
     category_text = models.CharField(max_length=100,verbose_name='Специальность')
+    
 
     def __str__(self):
         return self.category_text

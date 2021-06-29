@@ -9,7 +9,7 @@
                             </li>
  {% for category in categories %}
                             <li class="menu-li">
-                                <a href="#">{{ category}}</a>
+                                <a href="{% url 'cat_ord' category.id %}">{{ category}}</a>
                                 <ul class="submenu">
                                 {% for subcategory in category.category_set.all %}
                                     <li class="submenu-li"><a href="{% url 'cat_ord' subcategory.id %}">{{ subcategory }}</a></li>

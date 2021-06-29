@@ -1,12 +1,12 @@
-{% extends 'layout.html'%}
+{% extends 'layout_card.html'%}
 {% block unique_content%}
 <div class="container">
-    <div class="card">
+    <div class="card card_detail">
         <div>
             <img src="{{ card.ava.url }}" alt="фото">
         </div>
         <div class="card-bl">
-            <h3 class="fio-card">{{ card.fio }}</h3>
+            <h3 class="fio-card">{{ card.name }}</h3>
             <a class="card-card" href="{% url 'cat_ord' card.category.id %}">{{ card.category.category_text }}</a>
             <h5 class="card-card">Кредо:</h5>
             <p class="card-card">{{ card.kredo }}</p>

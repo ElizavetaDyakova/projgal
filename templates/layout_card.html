@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+{% load common_tags %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style_card.css' %}">
+    {% block title%}
+    <title>Галерея выпускников</title>
+    {% endblock%}
+</head>
+
+<body>
+<header class="head">
+<section class=" header-cont"><div id="">
+            {% show_top_menu %}
+            </div>
+        </section>
+</header>
+    <main>
+        {% block stat %}
+        {% endblock%}
+{% block unique_content %}
+{% endblock%}
+    </main>
+    <footer class="container">
+        <nav>
+            <ul class="navig-footer">
+                <li>
+                    <a href="#">
+                        <img src="{% static 'img/logo.png' %}" alt="TSPK">
+                    </a>
+                </li>
+                <li>
+                <a href="https://tspk.org/">Официальный сайт</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'script/script.js' %}"></script>
+</body>
+
+</html>

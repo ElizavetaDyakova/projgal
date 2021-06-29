@@ -4,7 +4,7 @@ from django import forms
 from core.models import Category
 
 class FilterForm(forms.Form):
-    category = forms.ModelChoiceField(queryset=Category.objects.all())
+    # category = forms.ModelChoiceField(queryset=Category.objects.all())
     god_grad = forms.IntegerField(label="Год выпуска", required=False)
 
 

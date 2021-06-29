@@ -1,31 +1,33 @@
-{% extends 'layout.html' %}
+{% extends 'layout_card.html' %}
 {% load static%}
-{% load cat_sort %}
-{% block navig %}
-{% endblock %}
-{% cat_sort %}
+{% block title%}
+    <title>{{categories}}</title>
+{% endblock%}
 {% block unique_content%}
 
 <section class="container">
-
+<h1 class="cat_name">{{categories}}</h1>
+<form class="form" action="" method="get">
+{{form.as_p}}
+<input class="prim" type="submit" value="Применить">
+</form>
 {% if cards %}
-<h1>{{cards.category.category_text}}</h1>
-    <ul>
+    <ul class="cards">
        {% for card in cards %}
+       <a href="{% url 'card_detail' card.id %}">
         <div class="card">
         <div>
             <img src="{{ card.ava.url }}" alt="фото">
         </div>
         <div class="card-bl">
-            <h3 class="fio-card">{{ card.fio }}</h3>
+            <h3 class="fio-card">{{ card.name }}</h3>
             <a class="card-card" href="{% url 'cat_ord' card.category.id %}">{{ card.category.category_text }}</a>
-            <h5 class="card-card">Кредо:</h5>
-            <p class="card-card">{{ card.kredo }}</p>
-            <h5 class="card-card">Отзыв:</h5>
-            <p class="card-card">{{ card.otzyv }}</p>
-            <p class="card-card">Год выпуска: {{ card.god_grad}}</p>
+            <p class="card-card">{{ card.kredo|truncatechars:40 }}</p>
+            <p class="card-card">{{ card.otzyv|truncatechars:21 }}</p>
+            <p class="card-card right">Год выпуска: {{ card.god_grad}}</p>
         </div>
     </div>
+    </a>
                             {% endfor%}
     </ul>
     {% else %}

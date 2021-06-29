@@ -64,14 +64,17 @@ def cat_ord(request, category_id):
     '''
     вьюха для просмотра постов по категориям
     '''
-    # form = FilterForm(request.GET)
+    form = FilterForm(request.GET)
     category = get_object_or_404(Category, id=category_id)
-    cards = Card.objects.filter(category=category)
-    categories = Category.objects.filter()
+    cards = Card.objects.filter(category=category).order_by('-god_grad')
+    categories = Category.objects.get(id=category_id)
+    if form.is_valid():
+        if form.cleaned_data["god_grad"]:
+            cards = cards.filter(god_grad__exact=form.cleaned_data["god_grad"])
     context = {
         'categories': categories,
         'cards': cards,
-        # 'form': form,
+        'form': form,
     }
     return render(request, 'cat.html', context)
 
@@ -109,4 +112,5 @@ def cat_sort(request):
     return {
         'categories': categories,
     }
+
 
