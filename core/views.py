@@ -83,8 +83,8 @@ def slide(request):
     '''
     вьюха для вывода gj категориям
     '''
-    items = list(Card.objects.all())
-    cards = random.sample(items, 5)
+    cards = Card.objects.order_by('?')[:5]
+    # cards = random.sample(items, 5)
     context = {
         'cards': cards,
     }
